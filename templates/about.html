@@ -1,6 +1,85 @@
-{%extends "base.html"%}
-{% block title %}About{% endblock %}
+{% extends "base.html" %}
+{% block title %}About Us - City Hospital{% endblock %}
 
 {% block content %}
-    <h1>Welcome to About Page</h1>
+<!-- Hero Section -->
+<div class="bg-primary text-white py-5 mb-5 shadow-sm">
+    <div class="container text-center py-4">
+        <h1 class="display-4 fw-bold mb-3">About City Hospital</h1>
+        <p class="lead mx-auto w-75">Dedicated to providing exceptional, compassionate healthcare to our community with state-of-the-art technology and expert medical professionals.</p>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row align-items-center g-5">
+        <!-- Text Content Column -->
+        <div class="col-lg-6">
+            <h2 class="text-primary fw-bold mb-4">Our Mission & Vision</h2>
+            <p class="text-muted fs-5 lh-base">Founded with a vision to revolutionize patient care, City Hospital blends cutting-edge diagnostics with deep medical empathy. We strive to create an environment where recovery is swift and every patient feels heard.</p>
+            <p class="text-muted fs-5 lh-base">From infant pediatrics to critical emergency care, our clinical teams are coordinated to provide seamlessly integrated treatment pipelines tailored to your needs.</p>
+        </div>
+        
+        <!-- Quick Stats Column -->
+        <div class="col-lg-6">
+            <div class="row g-4">
+                <!-- Stat 1 -->
+                <div class="col-sm-6">
+                    <div class="p-4 bg-light border border-start border-primary border-4 rounded shadow-sm text-center">
+                        <h3 class="display-6 fw-bold text-primary mb-1">150+</h3>
+                        <p class="text-uppercase small fw-bold text-muted mb-0">Expert Doctors</p>
+                    </div>
+                </div>
+                <!-- Stat 2 -->
+                <div class="col-sm-6">
+                    <div class="p-4 bg-light border border-start border-success border-4 rounded shadow-sm text-center">
+                        <h3 class="display-6 fw-bold text-success mb-1">25+</h3>
+                        <p class="text-uppercase small fw-bold text-muted mb-0">Specialties</p>
+                    </div>
+                </div>
+                <!-- Stat 3 -->
+                <div class="col-sm-6">
+                    <div class="p-4 bg-light border border-start border-warning border-4 rounded shadow-sm text-center">
+                        <h3 class="display-6 fw-bold text-warning mb-1">10k+</h3>
+                        <p class="text-uppercase small fw-bold text-muted mb-0">Happy Patients</p>
+                    </div>
+                </div>
+                <!-- Stat 4 -->
+                <div class="col-sm-6">
+                    <div class="p-4 bg-light border border-start border-info border-4 rounded shadow-sm text-center">
+                        <h3 class="display-6 fw-bold text-info mb-1">24/7</h3>
+                        <p class="text-uppercase small fw-bold text-muted mb-0">Emergency Care</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Values Section -->
+    <div class="mt-5 pt-5 text-center">
+        <h2 class="text-primary fw-bold mb-5">Our Core Pillars</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                    <div class="text-primary mb-3"><i class="fas fa-heartbeat fa-2x"></i></div>
+                    <h4 class="fw-bold mb-3">Compassion First</h4>
+                    <p class="text-muted mb-0">Treating every single visitor with the utmost dignity, kindness, and individualized respect.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                    <div class="text-success mb-3"><i class="fas fa-microscope fa-2x"></i></div>
+                    <h4 class="fw-bold mb-3">Medical Excellence</h4>
+                    <p class="text-muted mb-0">Leveraging pioneering technological innovations and clinical studies for accurate treatment protocols.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white">
+                    <div class="text-info mb-3"><i class="fas fa-shield-alt fa-2x"></i></div>
+                    <h4 class="fw-bold mb-3">Patient Trust</h4>
+                    <p class="text-muted mb-0">Maintaining unwavering transparency and rigorous patient data confidentiality safety parameters.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
