@@ -28,9 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    ".onrender.com",
+    "django-tutorial-6fz5.onrender.com",
 ]
-
 # Application definition
 
 INSTALLED_APPS = [
