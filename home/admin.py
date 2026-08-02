@@ -9,3 +9,11 @@ class BookingAdmin(admin.ModelAdmin):
     search_fields = ('p_name', 'p_email', 'doc_name__doc_name')
     ordering = ('-booking_date',)
 admin.site.register(bookings, BookingAdmin)
+from django.contrib import admin
+from .models import ContactMessage
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'subject', 'created_at')  # Columns seen in admin list
+    readonly_fields = ('name', 'email', 'subject', 'message', 'created_at')  # Prevent editing
+    search_fields = ('name', 'email', 'subject')

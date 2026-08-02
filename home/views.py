@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect  
 from django.http import HttpResponse
+from django.contrib import messages
 from .models import departments as DepartmentModel
 from .models import Doctors as DoctorsModel
+from .models import ContactMessage
 
 from .forms import BookingForm
 
@@ -35,6 +37,21 @@ def doctors(request):
     return render(request, 'doctors.html', dict_docs)
 
 def contact(request):
+    if request.method == 'POST':
+        # Extract inputs from the HTML form fields using their 'name' attributes
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        # Instantiate and save into database
+        new_msg = ContactMessage(name=name, email=email, subject=subject, message=message)
+        new_msg.save()
+
+        # Display a green success notification popup
+        messages.success(request, 'Your message has been sent successfully!')
+        return redirect('contact')
+
     return render(request, 'contact.html')
 
 def departments(request):
