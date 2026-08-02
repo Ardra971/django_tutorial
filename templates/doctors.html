@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+{% block title %}Doctors{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Welcome to Doctors Page</h1>
+    <hr>
+
+    <div class="container text-center bg-light">
+        {% for doctor in doctors %}
+        <h1>{{ doctor.doc_name }}</h1>
+        <div class="card" style="width: 18rem; display:inline-block; margin:10px; ">
+        <img src="{{ doctor.doc_image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ doctor.doc_name }}</h5>
+            <p class="card-text">{{ doctor.doc_spec }}</p>
+            <h6>{{ doctor.dep_name }}</h6>
+            
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %} 
